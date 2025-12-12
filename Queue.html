@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queue Visualizer</title>
+<link rel="stylesheet" href="Queue style.css"> 
+</head>
+<body>
+<header><h1>Queue Visualizer</h1></header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Array.html">Array</a>
+    <a href="Stack.html">Stack</a>
+    <a href="Queue.html">Queues</a>
+    <a href="Trees.html">Binary Tree</a>
+    <a href="Algorithm.html">Algorithm</a>
+    <a href="Pseudocode.html">Pseudocode</a>
+</nav>
+<section>
+    <h2>Queue Operations</h2>
+    <input type="number" id="value" placeholder="Enter Value"><br>
+    <button onclick="enqueue()">Enqueue</button>
+    <button onclick="dequeue()">Dequeue</button>
+    <button onclick="clearQueue()">Delete All</button>
+    <button onclick="searchQueue()">Search</button>
+    <h3>Queue Visualization:</h3>
+    <div id="queueDisplay"></div>
+    <div class="output" id="outputBox">Output will appear here...</div>
+</section>
+<script src="Queue.js"></script>
+</body>
+</html>

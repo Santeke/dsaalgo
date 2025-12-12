@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Visualizer</title>
+<link rel="stylesheet" href="Array style.css">    
+</head>
+<body>
+<header><h1>Array Visualizer</h1></header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Array.html">Array</a>
+    <a href="Stack.html">Stack</a>
+    <a href="Queue.html">Queues</a>
+    <a href="Trees.html">Binary Tree</a>
+    <a href="Algorithm.html">Algorithm</a>
+    <a href="Pseudocode.html">Pseudocode</a>
+</nav>
+<section>
+    <h2>Array Operations</h2>
+    <input type="text" id="value" placeholder="Enter Value (letters or numbers)">
+    <br>
+    <button onclick="insertElement()">Insert</button>
+    <button onclick="deleteLast()">Delete Last</button>
+    <button onclick="deleteAll()">Delete All</button>
+    <button onclick="searchElement()">Search</button>
+    <button onclick="deleteIfExists()">Delete If Exists</button>
+    <h3>Array Visualization:</h3>
+    <div id="arrayDisplay"></div>
+    <div class="output" id="outputBox">Output will appear here...</div>
+</section>
+<script src="Array.js"></script>
+</body>
+</html>

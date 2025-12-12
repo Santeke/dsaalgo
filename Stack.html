@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack Visualizer</title>
+<link rel="stylesheet" href="Stack style.css"> 
+</head>
+<body>
+<header><h1>Stack Visualizer</h1></header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Array.html">Array</a>
+    <a href="Stack.html">Stack</a>
+    <a href="Queue.html">Queues</a>
+    <a href="Trees.html">Binary Tree</a>
+    <a href="Algorithm.html">Algorithm</a>
+    <a href="Pseudocode.html">Pseudocode</a>
+</nav>
+<section>
+    <h2>Expression Conversion</h2>
+    <input type="text" id="expr" placeholder="Enter Expression (A+B*C)">
+    <br>
+    <button onclick="toPostfix()">Infix ➝ Postfix</button>
+    <button onclick="toPrefix()">Infix ➝ Prefix</button>
+    <button onclick="postfixToInfix()">Postfix ➝ Infix</button>
+    <button onclick="prefixToInfix()">Prefix ➝ Infix</button>
+    <h3>Stack Visualization: </h3>
+    <div class="output" id="outputBox">Output will appear here...</div>
+    <div id="stackDisplay"></div>
+</section>
+<script src="stack.js"></script>
+</body>
+</html>

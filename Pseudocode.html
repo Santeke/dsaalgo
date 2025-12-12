@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudocode </title>
+<link rel="stylesheet" href="Pseudocode style.css">
+</head>
+<body>
+<header><h1>Pseudocode</h1></header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Array.html">Array</a>
+    <a href="Stack.html">Stack</a>
+    <a href="Queue.html">Queues</a>
+    <a href="Trees.html">Binary Tree</a>
+    <a href="Algorithm.html">Algorithm</a>
+    <a href="Pseudocode.html">Pseudocode</a>
+</nav>
+<section>
+    <h2>1. Sum of Two Numbers</h2>
+    <pre>
+START
+INPUT num1, num2
+sum ← num1 + num2
+OUTPUT sum
+STOP
+    </pre>
+    <h2>2. Even or Odd</h2>
+    <pre>
+START
+INPUT num
+IF num MOD 2 = 0 THEN
+    OUTPUT "Even"
+ELSE
+    OUTPUT "Odd"
+END IF
+STOP
+    </pre>
+
+    <h2>3. Largest of Three Numbers</h2>
+    <pre>
+START
+INPUT a, b, c
+IF a > b AND a > c THEN
+    largest ← a
+ELSE IF b > c THEN
+    largest ← b
+ELSE
+    largest ← c
+END IF
+OUTPUT largest
+STOP
+    </pre>
+
+    <h2>4. Factorial</h2>
+    <pre>
+START
+INPUT n
+factorial ← 1
+FOR i ← 1 TO n DO
+    factorial ← factorial * i
+END FOR
+OUTPUT factorial
+STOP
+    </pre>
+
+    <h2>5. Linear Search</h2>
+    <pre>
+START
+INPUT arr, target
+FOR i ← 0 TO length(arr)-1 DO
+    IF arr[i] = target THEN
+        OUTPUT "Found at index", i
+        STOP
+    END IF
+END FOR
+OUTPUT "Not Found"
+STOP
+    </pre>
+
+    <h2>6. Bubble Sort</h2>
+    <pre>
+START
+FOR i ← 0 TO n-1 DO
+    FOR j ← 0 TO n-i-2 DO
+        IF arr[j] > arr[j+1] THEN
+            SWAP arr[j], arr[j+1]
+        END IF
+    END FOR
+END FOR
+OUTPUT sorted array
+STOP
+    </pre>
+
+    <h2>7. Reverse a String</h2>
+    <pre>
+START
+INPUT text
+reversed ← ""
+FOR i ← length(text)-1 DOWNTO 0 DO
+    reversed ← reversed + text[i]
+END FOR
+OUTPUT reversed
+STOP
+    </pre>
+
+    <h2>8. Count Vowels</h2>
+    <pre>
+START
+INPUT text
+count ← 0
+FOR each char IN text DO
+    IF char IN ['a','e','i','o','u','A','E','I','O','U'] THEN
+        count ← count + 1
+    END IF
+END FOR
+OUTPUT count
+STOP
+    </pre>
+
+    <h2>9. Minimum in Array</h2>
+    <pre>
+START
+INPUT arr
+min ← arr[0]
+FOR each number IN arr DO
+    IF number < min THEN
+        min ← number
+    END IF
+END FOR
+OUTPUT min
+STOP
+    </pre>
+
+    <h2>10. Check Prime Number</h2>
+    <pre>
+START
+INPUT n
+IF n < 2 THEN
+    OUTPUT "Not Prime"
+    STOP
+END IF
+FOR i ← 2 TO sqrt(n) DO
+    IF n MOD i = 0 THEN
+        OUTPUT "Not Prime"
+        STOP
+    END IF
+END FOR
+OUTPUT "Prime"
+STOP
+    </pre>
+
+</section>
+
+</body>
+</html>

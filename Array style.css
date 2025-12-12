@@ -1,0 +1,145 @@
+/* GLOBAL */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e1e2f; /* Dark background */
+    color: #c9c9d9;
+}
+
+/* HEADER */
+header {
+    background: royalblue; /* VS Code Blue */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #252540; /* Darker navy */
+    flex-wrap: wrap;
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: #f0f0f0;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+nav a:hover { 
+    background: #007acc; 
+    color: white;
+}
+
+/* MAIN SECTION */
+section {
+    background: #2a2a4a;
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* TITLES */
+h2,
+h3 { 
+    color: #00eaff;
+    border-bottom: 2px solid #00eaff;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* INPUT */
+input {
+    padding: 10px;
+    width: 280px;
+    border: 2px solid #007acc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 15px;
+    background: #1e1e2f;
+    color: #e6e6e6;
+}
+
+/* BUTTON */
+button {
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00eaff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+    color: #1e1e2f;
+}
+
+/* ARRAY DISPLAY */
+#arrayDisplay {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    gap: 12px;
+}
+
+.array-box {
+    padding: 12px 20px;
+    background: #3c3c6e;
+    border: 3px solid #007acc;
+    border-radius: 8px;
+    font-weight: bold;
+    min-width: 90px;
+    text-align: center;
+    color: #e6e6e6;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* OUTPUT BOX */
+.output {
+    background: #1e1e2f;
+    color: #ffd700;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    border-left: 5px solid #ffd700;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    input {
+        width: 90%;
+    }
+    button {
+        padding: 10px 15px;
+        margin: 5px;
+    }
+    .array-box {
+        padding: 10px 15px;
+        min-width: 70px;
+    }
+}

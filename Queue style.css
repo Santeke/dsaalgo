@@ -1,0 +1,132 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0; padding: 0;
+    background: #1e1e2f; /* Dark background */
+    color: #c9c9d9;
+}
+
+header {
+    background: royalblue; /* Accent */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #2A5DA8; /* Dark blue */
+    flex-wrap: wrap;
+    padding: 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+}
+
+nav a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover { 
+    background: #224A85; 
+}
+
+section {
+    background: #2a2a4a;
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+h2 { 
+    color: #3A7BD5; 
+    border-bottom: 2px solid #3A7BD5;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+input {
+    padding: 10px; 
+    width: 280px;
+    border: 2px solid #3A7BD5;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 15px;
+    background: #FFFFFF;
+    color: #333;
+}
+
+button {
+    background: #3A7BD5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s;
+    margin: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #2A5DA8;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(58, 123, 213, 0.3);
+}
+
+#queueDisplay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 12px;
+}
+
+.queue-box {
+    padding: 12px 20px;
+    background: #E8F1FB; /* Light blue box */
+    border: 3px solid #3A7BD5;
+    border-radius: 8px;
+    font-weight: bold;
+    min-width: 90px;
+    text-align: center;
+    color: #2A5DA8;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.output {
+    background: #F2F4F7;
+    color: #2A5DA8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    border-left: 5px solid #3A7BD5;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    input {
+        width: 90%;
+    }
+    button {
+        padding: 10px 15px;
+        margin: 5px;
+    }
+    .queue-box {
+        padding: 10px 15px;
+        min-width: 70px;
+    }
+}

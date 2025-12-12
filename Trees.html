@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Binary Tree Visualizer — Advanced</title>
+<link rel="stylesheet" href="Trees style.css">
+</head>
+<body>
+<header>Binary Tree Visualizer</header>
+<nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="Array.html">Array</a>
+    <a href="Stack.html">Stack</a>
+    <a href="Queue.html">Queues</a>
+    <a href="Trees.html">Binary Tree</a>
+    <a href="Algorithm.html">Algorithm</a>
+    <a href="Pseudocode.html">Pseudocode</a>
+</nav>
+<div class="wrap">
+  <div class="controls">
+
+   
+    <div class="controls-row flex-wrap w-100">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <label>Value</label>
+        <input id="valueInput" type="number" placeholder="Enter number" />
+      </div>
+
+     
+      <div class="d-flex gap-2 flex-wrap mt-2 mt-md-0">
+        <button id="insertBtn">Insert</button>
+        <button id="deleteBtn" class="secondary">Delete Value</button>
+        <button id="deleteAllBtn" class="secondary">Delete All</button>
+      </div>
+    </div>
+
+   
+    <div class="controls-row flex-wrap w-100 mt-2">
+
+      <div class="d-flex gap-2 flex-wrap">
+        <button id="searchBtn" class="small">Search (Animate)</button>
+        <button id="inBtn" class="small">Inorder</button>
+        <button id="preBtn" class="small">Preorder</button>
+        <button id="postBtn" class="small">Postorder</button>
+      </div>
+
+    
+      <div class="d-flex align-items-center gap-2 flex-wrap mt-2">
+        <label class="small-muted">Delay</label>
+        <input id="delayRange" type="range" min="100" max="1200" value="700" />
+        <span id="delayVal" class="small-muted">700ms</span>
+      </div>
+
+      <div class="spacer"></div>
+
+      
+      <button id="stopBtn" class="small secondary mt-2">Stop Anim</button>
+
+    </div>
+  </div>
+</div>
+
+  <div class="visual">
+    <div id="canvas">
+      <svg id="lines" class="lines"></svg>
+    </div>
+    <div class="output" id="output">Output will appear here...</div>
+  </div>
+</div>
+<script src="trees.js"></script>
+</body>
+</html>
