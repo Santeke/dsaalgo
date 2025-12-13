@@ -22,7 +22,6 @@ function updateOutput(msg) {
     document.getElementById("outputBox").textContent = msg;
 }
 
-// -------- INFIX → POSTFIX --------
 function toPostfix() {
     let expr = document.getElementById("expr").value.replace(/\s+/g, "");
     stack = [];
@@ -58,7 +57,6 @@ function swapBrackets(expr) {
                .replace(/#/g, ")");
 }
 
-// -------- INFIX → PREFIX --------
 function toPrefix() {
     let expr = document.getElementById("expr").value.replace(/\s+/g, "");
     stack = [];
@@ -86,7 +84,6 @@ function toPrefix() {
     updateOutput(`Prefix: ${reverseString(postfix)}`);
 }
 
-// -------- POSTFIX → INFIX --------
 function postfixToInfix() {
     let expr = document.getElementById("expr").value.replace(/\s+/g, "");
     stack = [];
@@ -107,7 +104,6 @@ function postfixToInfix() {
     displayStack();
 }
 
-// -------- PREFIX → INFIX --------
 function prefixToInfix() {
     let expr = document.getElementById("expr").value.replace(/\s+/g, "");
     stack = [];
