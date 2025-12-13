@@ -24,7 +24,7 @@ function clearAnimationTimers(){
 }
 function setOutput(msg){ output.textContent = msg; }
 
-/* ===== BST operations ===== */
+
 function insertRec(node, value){
   if (!node) return new Node(value);
   if (value < node.value) node.left = insertRec(node.left, value);
