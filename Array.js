@@ -1,6 +1,5 @@
 let arr = [];
 
-// Validate input: letters, numbers, spaces only
 function isValidInput(str) {
     return /^[A-Za-z0-9 ]+$/.test(str);
 }
