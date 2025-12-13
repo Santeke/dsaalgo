@@ -1,6 +1,6 @@
 let queue = [];
 
-// Update display
+
 function updateQueueDisplay() {
     const display = document.getElementById("queueDisplay");
     display.innerHTML = "";
@@ -17,7 +17,7 @@ function updateQueueDisplay() {
     }
 }
 
-// Enqueue
+
 function enqueue() {
     const value = document.getElementById("value").value;
 
@@ -32,7 +32,7 @@ function enqueue() {
     document.getElementById("value").value = "";
 }
 
-// Dequeue
+
 function dequeue() {
     if (queue.length === 0) {
         output("Queue is empty. Nothing to dequeue.");
@@ -44,14 +44,14 @@ function dequeue() {
     output(`Dequeued: ${removed}`);
 }
 
-// Delete All
+
 function clearQueue() {
     queue = [];
     updateQueueDisplay();
     output("Queue cleared.");
 }
 
-// Search element
+
 function searchQueue() {
     const value = Number(document.getElementById("value").value);
 
@@ -69,7 +69,7 @@ function searchQueue() {
     }
 }
 
-// Output function
+
 function output(msg) {
     document.getElementById("outputBox").textContent = msg;
 }
