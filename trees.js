@@ -70,7 +70,7 @@ function findNode(node, value){
   return findNode(value < node.value ? node.left : node.right, value);
 }
 
-/* ===== Compute layout ===== */
+
 function computePositions(){
   let xIndex=0;
   function inorderAssign(node, depth){
@@ -96,7 +96,7 @@ function computePositions(){
   setPos(root);
 }
 
-/* ===== Rendering ===== */
+
 function clearCanvas(){
   svg.innerHTML = '';
   [...canvas.querySelectorAll('.node')].forEach(n=>n.remove());
@@ -139,12 +139,12 @@ function drawNodes(n){
   drawNodes(n.right);
 }
 
-/* ===== Traversals ===== */
+
 function inorder(n,a){ if(n){ inorder(n.left,a); a.push(n); inorder(n.right,a);} }
 function preorder(n,a){ if(n){ a.push(n); preorder(n.left,a); preorder(n.right,a);} }
 function postorder(n,a){ if(n){ postorder(n.left,a); postorder(n.right,a); a.push(n);} }
 
-/* ===== Animations ===== */
+
 function clearHighlights(){
   document.querySelectorAll('.node').forEach(n => n.classList.remove('highlight','found'));
 }
@@ -201,7 +201,7 @@ function animateTraversal(t){
   animateSequence(nodes,()=>setOutput(`${t}: ${nodes.map(n=>n.value).join(', ')}`));
 }
 
-/* ===== Events ===== */
+
 insertBtn.onclick=()=>{ const v=+valueInput.value; if(isNaN(v))return; if(isAnimating){clearAnimationTimers();} insertValue(v); };
 deleteBtn.onclick=()=>{ const v=+valueInput.value; if(isNaN(v))return; if(isAnimating){clearAnimationTimers();} deleteValue(v); };
 deleteAllBtn.onclick=()=>{ clearAnimationTimers(); deleteAll(); };
