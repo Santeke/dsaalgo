@@ -158,3 +158,4 @@ function peekElement() {
     const top = stack[stack.length - 1];
     updateOutput(`Top element: ${top}`);
 }
+
