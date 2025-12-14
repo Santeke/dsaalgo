@@ -8,10 +8,10 @@ function updateDisplay() {
     const display = document.getElementById("arrayDisplay");
     display.innerHTML = "";
 
-    arr.forEach((val, index) => {
+    arr.forEach((val) => {
         const box = document.createElement("div");
         box.className = "array-box";
-        box.textContent = `${index}: ${val}`;
+        box.textContent = val; 
         display.appendChild(box);
     });
 }
@@ -69,7 +69,7 @@ function searchElement() {
     if (index === -1) {
         output(`Value "${value}" not found.`);
     } else {
-        output(`Value "${value}" found at index ${index}.`);
+        output(`Value "${value}" found at position ${index + 1}.`);
     }
 }
 
