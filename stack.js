@@ -123,3 +123,38 @@ function prefixToInfix() {
     updateOutput(stack.length === 1 ? `Infix: ${stack.pop()}` : "Invalid Prefix!");
     displayStack();
 }
+
+
+function pushElement() {
+    const value = document.getElementById("value").value.trim();
+
+    if (value === "") {
+        updateOutput("Please enter a value to push!");
+        return;
+    }
+
+    stack.push(value);
+    displayStack();
+    updateOutput(`Pushed: ${value}`);
+}
+
+function popElement() {
+    if (stack.length === 0) {
+        updateOutput("Stack is empty! Nothing to pop.");
+        return;
+    }
+
+    const removed = stack.pop();
+    displayStack();
+    updateOutput(`Popped: ${removed}`);
+}
+
+function peekElement() {
+    if (stack.length === 0) {
+        updateOutput("Stack is empty! Nothing to peek.");
+        return;
+    }
+
+    const top = stack[stack.length - 1];
+    updateOutput(`Top element: ${top}`);
+}
