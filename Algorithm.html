@@ -3,241 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Algorithm Reference</title>
-<link rel="stylesheet" href="Algorithm style.css">
+<title>Array Visualizer</title>
+<link rel="stylesheet" href="Array style.css">    
 </head>
 <body>
-<header><h1>Algorithms </h1></header>
+<header><h1>Array Visualizer</h1></header>
 <nav>
     <a href="index.html">Home</a>
     <a href="Array.html">Array</a>
     <a href="Stack.html">Stack</a>
+    <a href="Queue.html">Queues</a>
     <a href="Trees.html">Binary Tree</a>
     <a href="Algorithm.html">Algorithm</a>
     <a href="Pseudocode.html">Pseudocode</a>
 </nav>
 <section>
-    <h1>Top 10 Common Algorithms in C++</h1>
-    <hr>
-    <div class="output">
-        <h3>1. Bubble Sort</h3>
-        <p>Repeatedly compares and swaps adjacent elements until sorted. It's a simple comparison sort, but inefficient for large lists.</p>
-        <strong>Time Complexity:</strong> O(n²)
-        
-        <pre><code>void bubbleSort(std::vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    for (int i = 0; i &lt; n; i++) {
-        for (int j = 0; j &lt; n-i-1; j++) {
-            if (arr[j] &gt; arr[j+1])
-                std::swap(arr[j], arr[j+1]);
-        }
-    }
-}
-</code></pre>
-    </div>
-    <hr>
-    <div class="output">
-        <h3>2. Selection Sort</h3>
-        <p>Selects the **smallest** element from the unsorted portion and places it at the correct position in the sorted portion.</p>
-        <strong>Time Complexity:</strong> O(n²)
-        
-        <pre><code>void selectionSort(std::vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    for (int i = 0; i &lt; n; i++) {
-        int minIdx = i;
-        for (int j = i+1; j &lt; n; j++)
-            if (arr[j] &lt; arr[minIdx])
-                minIdx = j;
-        std::swap(arr[i], arr[minIdx]);
-    }
-}
-</code></pre>
-    </div>
-    <hr>
-    <div class="output">
-        <h3>3. Insertion Sort</h3>
-        <p>Builds the final sorted array one item at a time. It iterates, taking elements from the input data and inserting them into the correct position in the already sorted list.</p>
-        <strong>Time Complexity:</strong> O(n²)
-        <pre><code>void insertionSort(std::vector&lt;int&gt;&amp; arr) {
-    int n = arr.size();
-    for (int i = 1; i &lt; n; i++) {
-        int key = arr[i];
-        int j = i - 1;
-        while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {
-            arr[j+1] = arr[j];
-            j--;
-        }
-        arr[j+1] = key;
-    }
-}
-</code></pre>
-    </div>
-    <hr>
-    <div class="output">
-        <h3>4. Merge Sort</h3>
-        <p>A highly efficient, stable, comparison-based sort. It follows the **Divide and Conquer** paradigm: Divides the array, sorts the sub-arrays recursively, and merges them.</p>
-        <strong>Time Complexity:</strong> O(n log n)
-        <pre><code>void merge(std::vector&lt;int&gt;&amp; arr, int l, int m, int r) {
-    int n1 = m - l + 1;
-    int n2 = r - m;
-    std::vector&lt;int&gt; L(n1), R(n2);
-    for (int i = 0; i &lt; n1; i++) L[i] = arr[l+i];
-    for (int i = 0; i &lt; n2; i++) R[i] = arr[m+1+i];
-    int i = 0, j = 0, k = l;
-    while (i &lt; n1 &amp;&amp; j &lt; n2) {
-        if (L[i] &lt;= R[j]) arr[k++] = L[i++];
-        else arr[k++] = R[j++];
-    }
-    while (i &lt; n1) arr[k++] = L[i++];
-    while (j &lt; n2) arr[k++] = R[j++];
-}
-void mergeSort(std::vector&lt;int&gt;&amp; arr, int l, int r) {
-    if (l &lt; r) {
-        int m = l + (r - l) / 2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m+1, r);
-        merge(arr, l, m, r);
-    }
-}
-</code></pre>
-    </div>
-    <hr>
-    <div class="output">
-        <h3>5. Quick Sort</h3>
-        <p>A highly popular **Divide and Conquer** sort. It picks an element as a **pivot** and partitions the array around it, recursively sorting the partitions.</p>
-        <strong>Time Complexity:</strong> O(n log n)
-    
-        <pre><code>int partition(std::vector&lt;int&gt;&amp; arr, int low, int high) {
-    int pivot = arr[high];
-    int i = low - 1;
-    for (int j = low; j &lt; high; j++) {
-        if (arr[j] &lt; pivot) {
-            i++;
-            std::swap(arr[i], arr[j]);
-        }
-    }
-    std::swap(arr[i+1], arr[high]);
-    return i+1;
-}
-
-void quickSort(std::vector&lt;int&gt;&amp; arr, int low, int high) {
-    if (low &lt; high) {
-        int pi = partition(arr, low, high);
-        quickSort(arr, low, pi-1);
-        quickSort(arr, pi+1, high);
-    }
-}
-</code></pre>
-    </div>
-
-    <hr>
-
-    <div class="output">
-        <h3>6. Linear Search</h3>
-        <p>Checks each element one-by-one to find the target. This is the simplest search but works on unsorted data.</p>
-        <strong>Time Complexity:</strong> O(n)
-        <pre><code>int linearSearch(const std::vector&lt;int&gt;&amp; arr, int target) {
-    for (int i = 0; i &lt; arr.size(); i++)
-        if (arr[i] == target) return i;
-    return -1;
-}
-</code></pre>
-    </div>
-
-    <hr>
-
-    <div class="output">
-        <h3>7. Binary Search</h3>
-        <p>Searches in a **sorted** list by repeatedly dividing the search interval in half. Extremely fast for large, ordered datasets.</p>
-        <strong>Time Complexity:</strong> O(log n)
-        <pre><code>int binarySearch(const std::vector&lt;int&gt;&amp; arr, int target) {
-    int left = 0, right = arr.size()-1;
-    while (left &lt;= right) {
-        int mid = left + (right-left)/2;
-        if (arr[mid] == target) return mid;
-        else if (arr[mid] &lt; target) left = mid+1;
-        else right = mid-1;
-    }
-    return -1;
-}
-</code></pre>
-    </div>
-
-    <hr>
-
-    <div class="output">
-        <h3>8. Breadth-First Search (BFS)</h3>
-        <p>A graph traversal algorithm that explores **level-by-level** (all nodes at the current depth level before moving to the next level), using a **queue** data structure.</p>
-        <strong>Time Complexity:</strong> O(V + E)
-        
-        <pre><code>void BFS(int start, const std::vector&lt;std::vector&lt;int&gt;&gt;&amp; adj) {
-    std::vector&lt;bool&gt; visited(adj.size(), false);
-    std::queue&lt;int&gt; q;
-    visited[start] = true;
-    q.push(start);
-
-    while (!q.empty()) {
-        int node = q.front(); q.pop();
-        std::cout &lt;&lt; node &lt;&lt; " ";
-        for (int neighbor : adj[node]) {
-            if (!visited[neighbor]) {
-                visited[neighbor] = true;
-                q.push(neighbor);
-            }
-        }
-    }
-}
-</code></pre>
-    </div>
-
-
-    <hr>
-
-    <div class="output">
-        <h3>9. Depth-First Search (DFS)</h3>
-        <p>A graph traversal algorithm that explores as far as possible along each branch before **backtracking**. It typically uses a **stack** or **recursion**.</p>
-        <strong>Time Complexity:</strong> O(V + E)
-        
-        <pre><code>void DFS(int node, const std::vector&lt;std::vector&lt;int&gt;&gt;&amp; adj, std::vector&lt;bool&gt;&amp; visited) {
-    visited[node] = true;
-    std::cout &lt;&lt; node &lt;&lt; " ";
-    for (int neighbor : adj[node])
-        if (!visited[neighbor]) DFS(neighbor, adj, visited);
-}
-</code></pre>
-    </div>
-
-
-    <hr>
-
-    <div class="output">
-        <h3>10. Dijkstra’s Algorithm</h3>
-        <p>An algorithm for finding the **shortest paths** between nodes in a graph, which may represent road networks. It requires a weighted graph with **non-negative** edge weights.</p>
-        <strong>Time Complexity:</strong> O(E log V)
-        
-        <pre><code>void dijkstra(int start, const std::vector&lt;std::vector&lt;std::pair&lt;int,int&gt;&gt;&gt;&amp; graph) {
-    int n = graph.size();
-    // Correctly use std::numeric_limits
-    std::vector&lt;int&gt; dist(n, std::numeric_limits&lt;int&gt;::max());
-    dist[start] = 0;
-    std::priority_queue&lt;std::pair&lt;int,int&gt;, std::vector&lt;std::pair&lt;int,int&gt;&gt;, std::greater&lt;&gt;&gt; pq;
-    pq.push({0, start});
-
-    while (!pq.empty()) {
-        auto [d, u] = pq.top(); pq.pop();
-        if (d &gt; dist[u]) continue;
-        for (auto [v, w] : graph[u]) {
-            if (dist[u] + w &lt; dist[v]) {
-                dist[v] = dist[u] + w;
-                pq.push({dist[v], v});
-            }
-        }
-    }
-
-    for (int i = 0; i &lt; n; i++) std::cout &lt;&lt; "Distance to " &lt;&lt; i &lt;&lt; ": " &lt;&lt; dist[i] &lt;&lt; "\n";
-}
-</code></pre>
-    </div>
+    <h2>Array Operations</h2>
+    <input type="text" id="value" placeholder="Enter Value (letters or numbers)">
+    <br>
+    <button onclick="insertElement()">Insert</button>
+    <button onclick="deleteLast()">Delete Last</button>
+    <button onclick="deleteAll()">Delete All</button>
+    <button onclick="searchElement()">Search</button>
+    <button onclick="deleteIfExists()">Delete If Exists</button>
+    <h3>Array Visualization:</h3>
+    <div id="arrayDisplay"></div>
+    <div class="output" id="outputBox">Output will appear here...</div>
 </section>
+<script src="Array.js"></script>
 </body>
 </html>
