@@ -275,3 +275,78 @@ button:hover {
         font-size: 15px;
     }
 }
+.members {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(21,27,47,0.85);
+    padding: 30px;
+    border-radius: 22px;
+    border: 2px solid #6e00ff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    text-align: center;
+    color: #e0e6f5;
+}
+
+.members h3 {
+    color: #b573ff;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.members ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.members li {
+    background: rgba(29,36,64,0.8);
+    border: 2px solid #6e00ff;
+    border-radius: 16px;
+    padding: 15px 20px;
+    min-width: 180px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.members li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    background: rgba(29,36,64,0.95);
+}
+
+.members li span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: #6e00ff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.final-requirement-footer {
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffdd57;
+    background: rgba(11,15,25,0.6);
+    border-top: 2px solid #6e00ff;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.4);
+    margin-top: 50px;
+}
